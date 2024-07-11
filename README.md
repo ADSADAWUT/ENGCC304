@@ -2,7 +2,7 @@
 
 สัปดาห์ | การบ้าน | Lab 
 --- | --- | ---
-1|asdada
+1|[asdada](https://www.youtube.com/watch?v=01p2FCUcYY8).|NoLab
 2|
 3|
 4|
