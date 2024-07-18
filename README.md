@@ -2,10 +2,10 @@
 
 สัปดาห์ | การบ้าน 
 --- | --- 
-1|[asdada](https://www.youtube.com/watch?v=01p2FCUcYY8)
+1|
 2|
 3|[Lab-03](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lab-03)
-4|
+4|[Lab-04](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lap-04)
 5|
 6|
 7|
