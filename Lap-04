@@ -51,4 +51,4 @@ int main() {
     printf( "Total income that employees will receive: %.2f baht\n", Salary_amount ) ;
 
     return 0 ;
-}//end main function
+}// end main function
