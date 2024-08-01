@@ -6,7 +6,7 @@
 2|
 3|[Lab-03](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lab-03)
 4|[Lab-04](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lap-04)
-5|[Lap-05](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lap-05)
+5|[Lab-05](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lap-05)
 6|
 7|
 8|
