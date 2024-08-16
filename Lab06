@@ -1,29 +1,23 @@
 #include <stdio.h>
-
 int main() {
-    int bit = 0 ;  // จำนวนบิต
-    printf( "bit : " ) ;
-    scanf( "%d", &bit ) ;
-    if( bit % 2 != 0 ) {
+    if(int bit = 0 ;printf( "bit : " ), scanf( "%d", &bit ), bit % 2 != 0 ) {
         for ( int i = 0 ; i < bit ; i++ ) {
             for ( int j = 0 ; j < bit ; j++ ) {
                 if ( j == i )
                     printf( "1" ) ;
                 else
-                    printf( "0" ) ;
-            }//end if else
+                    printf( "0" ) ; }//end if else
             printf( "\n" ) ;
         }//end for
     } else {
         for ( int i = 0 ; i < bit ; i++ ) {
             for ( int j = 0 ; j < bit ; j++ ) {
                 if ( j == bit - i - 1 )
-                    printf( "1" ) ;
+                    printf( "1" ) ; 
                 else
-                    printf( "0" ) ;
-            }//end if else
+                    printf( "0" ) ; }//end if else
             printf( "\n" ) ;
         }//end for
-    }
-    return 0 ;//end funtion
-}
+    }//end else
+    return 0 ;
+}//end funtion
