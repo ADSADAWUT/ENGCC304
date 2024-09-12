@@ -1,0 +1,104 @@
+/*
+    จงเขียนโปรแกรมทายตัวเลขซึ่งทำงานดังนี้
+    - ตอนเริ่มเกมผู้เล่นจะมีคะแนนเต็ม 100
+    - โปรแกรมจะสุ่มตัวเลขที่มีค่าตั้งแต่ 1 ถึง 100
+    - ให้ผู้เล่นทายว่าตัวเลขที่โปรแกรมสุ่มมามีค่าเป็นเท่าใด
+        - หากทายผิด โปรแกรมจะลบคะแนนของผู้เล่นไป 10 หน่วย พร้อมแจ้งคะแนนปัจจุบันให้ผู้เล่นทราบด้วย
+        - หากทายผิด โปรแกรมจะต้องบอกใบ้ว่าคำตอบที่ถูกมีค่า "มากกว่า" หรือ "น้อยกว่า" ตัวเลขที่ผู้ใช้ทาย
+        - หากทายผิด ให้โปรแกรมรอรับตัวเลขถัดไปได้เลย
+        - หากทายถูก ให้โปรแกรมแสดงความยินดีกับผู้ใช้ พร้อมแจ้งคะแนนปัจจุบันให้กับผู้เช่น
+        - เมื่อเล่นเสร็จโปรแกรมรอรับคำสั่งจากผู้ใช้ หากผู้ใช้กรอกเลข 1 จะเข้าสู่โหมดการเล่นเกมใหม่อีกครั้ง หากกด -1 ให้หยุดการทำงานของโปรแกรม
+
+    หมายเหตุ : การสุ่มตัวเลขจะใช้คำสั่ง rand() ที่อยู่ใน stdlib.h หากต้องการสุ่มตัวเลข 0 ถึง 100 ต้องใช้คำสั่งดังนี้
+        rand() % 100 + 1
+    หมายเหตุ : หากต้องการสุ่มตัวเลขที่เปลี่ยนแปลงตามเวลา ต้องใช้คำสั่ง srand( time( NULL ) ) ในตอนต้นของโปรแกรมด้วย
+
+    Test case & Output:
+        Do you want to play game (1=play,-1=exit) :
+            1
+        (Score=100)
+        Guess the winning number (1-100) :
+            20
+        Sorry, the winning number is HIGHER than 20. (Score=90)
+        Guess the winning number (21-100) :
+            50
+        Sorry, the winning number is LOWER than 50. (Score=80)
+        Guess the winning number (21-49) :
+            42
+        That is correct! The winning number is 42.
+        Score this game: 80
+
+        Do you want to play game (1=play,-1=exit) :
+            1
+        (Score=100)
+        Guess the winning number (1-100) : 
+            75
+        Sorry, the winning number is LOWER than 75. (Score=90)
+        Guess the winning number (1-74) : 
+            20
+        Sorry, the winning number is LOWER than 20. (Score=80)
+        Guess the winning number (1-19) : 
+            2
+        Sorry, the winning number is HIGHER than 2. (Score=70)
+        Guess the winning number (3-19) : 
+            15
+        That is correct! The winning number is 15.
+        Score this game: 70
+
+        Do you want to play game (1=play,-1=exit) :
+            -1
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int guess ; 
+    int play = 0 ;
+
+    srand(time( 0 )) ; // สุ่มตัวเลข
+    printf( "Do you want to play game ( 1 = play, -1 = exit ) : " ) ; // ต้องการเล่นไหม พิมพ์ 1 เพื่อเล่นอีกครั้ง หรือ -1 เพื่อออก
+    scanf( "%d" , &play ) ;
+    do {    
+        int score = 100 ;
+        int number = rand() % 100 + 1 ; // สุ่มตัวเลขตั้งแต่ 1 ถึง 100
+        int high = 100 ;
+        int low = 0 ;
+
+        if ( play == -1 ) {
+            break ;
+        } // end if ออกเกม
+        while ( score > 0 ) {
+            printf( "Guess the winning number ( %d - %d ) : " , low , high ) ; // กรุณาทายตัวเลข (1-100)
+            scanf( "%d" , & guess ) ;
+            if ( guess == number ) { 
+                printf( "That is correct! The winning number is %d\n", number ) ; // ยินดีด้วย ทายถูกต้อง
+                printf( "Score this game : %d\n" , score ) ; // คะแนนของคุณคือ ...;
+                break ;
+            } else {
+                score -= 10; // ลดคะแนนทุกครั้งที่ทายผิด
+                if ( score <= 0 ) {
+                    printf( "You lost! The correct number is %d\n" , number ) ; // แสดงผลเมื่อแพ้
+                    break;
+                }
+                if ( guess > number ) {
+                    printf( "Sorry, the winning number is LOWER than %d\n" , guess ) ; // ทายมากเกินไป
+                    if ( guess - 1 < high ) {
+                        high = guess - 1 ; // ปรับช่วงสูงสุดให้น้อยกว่าตัวเลขที่ทาย
+                    }
+                } else {
+                    printf( "Sorry, the winning number is HIGHER than %d\n" , guess ) ; // ทายน้อยเกินไป
+                    if ( guess + 1 > low ) {
+                        low = guess + 1 ; // ปรับช่วงต่ำสุดให้น้อยกว่าตัวเลขที่ทาย
+                    }
+                }
+                printf( "Score this game: %d\n", score ) ; // แสดงคะแนนที่เหลือ
+            }//end else
+        }//end while
+        printf( "Want to play again? ( 1 = play, -1 = exit ) : " ) ; // ต้องการเล่นอีกครั้งหรือไม่? พิมพ์ 1 เพื่อเล่นอีกครั้ง หรือ -1 เพื่อออก
+        scanf( "%d" , &play ) ;
+    } while ( play == 1 ) ; // เล่นอีกรอบ
+    printf( "Thank you for playing\n" ) ;
+
+    return 0 ;
+}//end main function
