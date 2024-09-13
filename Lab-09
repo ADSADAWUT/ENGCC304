@@ -44,7 +44,7 @@ int main() {
     }//end for
      printf("\nArray: ") ;
     for ( i = 0 ; i < N ; i++ ) {
-        if ( array[i] <= 1 ) {
+        if ( array[ i ] <= 1 ) {
             printf( "# " ) ; 
             continue ;
         }
