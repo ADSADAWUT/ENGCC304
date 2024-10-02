@@ -1,1 +1,49 @@
+#include <stdio.h>
+
+typedef struct {
+    char Name [ 20 ] , ID [ 5 ] ;
+    float scores [ 5 ] ;
+} Student ;
+
+char grade(float score) {
+    return (score >= 80) ? 'A' : 
+    ( score >= 75 ) ? 'B+' : 
+    ( score >= 70 ) ? 'B' :
+    ( score >= 65 ) ? 'C+' : 
+    ( score >= 60 ) ? 'C' : 
+    ( score >= 55 ) ? 'D+' :
+    ( score >= 50 ) ? 'D' : 
+    'F' ;
+} // end char
+
+int main() {
+    Student students [ 3 ] ;
+    
+    for ( int i = 0 ; i < 3 ; i++ ) {
+        printf( "Student %d:\nName: " , i + 1 ) ;
+        scanf( " %[^\n]%*c" , students [ i ] . Name ) ;
+        printf( "ID: " ) ;
+        scanf( "%s" , students [ i ] . ID ) ;
+        for ( int j = 0 ; j < 5 ; j++ ) {
+            printf( "Scores in Subject %d: " , j + 1 ) ;
+            scanf( "%f" , & students [ i ] . scores [ j ] ) ;
+        }
+    } 
+
+    for ( int i = 0 ; i < 3 ; i++ ) {
+        float sum = 0 ;
+        printf( "\nStudent %d:\nName: %s\nID: %s\nScores:" , i + 1 , students [ i ] . Name , students [ i ] . ID ) ; 
+        for ( int j = 0 ; j < 5 ; j++ ) {
+            printf( " %.0f" , students [ i ] . scores [ j ] ) ;
+            sum += students [ i ] . scores [ j ] ;
+        }
+        printf( "\nGrades: " ) ;
+        for ( int j = 0 ; j < 5 ; j++ ) {
+            printf( "%c " , grade ( students [ i ] . scores [ j ] ) ) ;
+        }
+        printf( "\nAverage Scores: %.1f\n" , sum / 5.0 ) ;
+    } // end main
+
+    return 0 ;
+} // end funtion
 
