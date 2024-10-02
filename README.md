@@ -11,7 +11,7 @@
 7|[Lab-07](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lab-07)
 8|[Lab-09](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lab-09)
 9|
-10|
+10|[Lab-10](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lab-10)
 11|[Lab-11](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lab-11)
 12|[Lab-12](https://github.com/ADSADAWUT/ENGCC304/blob/main/Lab-12)
 13|
