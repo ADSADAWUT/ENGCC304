@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="24.8.9">
   <diagram name="หน้า-1" id="2nlXv1pqIPgkXqsJSceG">
-    <mxGraphModel dx="1404" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2052" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -78,6 +78,12 @@
         </mxCell>
         <mxCell id="Dh8EfZxSOGTGxjuiPG-9-20" value="ตรวจCodeใหม่" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="154" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dh8EfZxSOGTGxjuiPG-9-24" value="yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="414" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dh8EfZxSOGTGxjuiPG-9-25" value="no" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="560" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
