@@ -40,6 +40,9 @@
         <mxCell id="2CftbTrwiL6cRvHvEk_t-7" value="แสดง รหัสประจำตัวพนักงาน" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="319" y="590" width="190" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="2CftbTrwiL6cRvHvEk_t-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2CftbTrwiL6cRvHvEk_t-8" target="2CftbTrwiL6cRvHvEk_t-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="2CftbTrwiL6cRvHvEk_t-8" value="แสดง เงินเดือนของ พนักงาน&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="319" y="690" width="190" height="60" as="geometry" />
         </mxCell>
